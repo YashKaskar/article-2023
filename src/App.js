@@ -1,21 +1,22 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+
 
 function App() {
 const name = 'Yash Kaskar'
   return (
+
     <div className="App">
 
-      <Navbar />
-
-
-
+      < Navbar />
 
       <div className="container">
-        <h1>Hello React</h1>
-        <p>Building the Articles</p>
-        <h2>{ name }</h2>
+        
+      < Home />
+        
       </div>
+      
     </div>
   );
 }

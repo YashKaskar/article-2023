@@ -4,7 +4,7 @@ import Home from './components/Home';
 
 
 function App() {
-const name = 'Yash Kaskar'
+
   return (
 
     <div className="App">

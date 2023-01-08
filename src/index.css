@@ -10,5 +10,37 @@
 /* navbar style */
 .navbar{
     display: flex;
+    padding: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 600px;
+    border-bottom: 1.9px solid #61876E;
+}
+
+/* navbar h1 style */
+.navbar h1{
+    color: #2DCDDF;
     
 }
+
+/* navbar a style */
+#anchor{
+    margin-left: 2rem;
+    color: #393E46;
+}
+
+#anchor:hover{
+        color: #FF9E9E;
+}
+
+/* homepage content */
+.home{  
+    padding: 2rem;
+    max-width: 600px;
+    margin: 40px auto;
+    color: #FEA1BF;
+}
+
+
+

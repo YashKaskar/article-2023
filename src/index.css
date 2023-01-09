@@ -36,12 +36,10 @@
 }
 
 /* homepage content */
-.home{  
-    padding: 2rem;
+.container{ 
     max-width: 600px;
     margin: 40px auto;
-    color: #FEA1BF;
+    padding: 20px;
 }
-
 
 

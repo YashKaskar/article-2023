@@ -48,9 +48,17 @@
     color: #f1356d;
     margin-bottom: 10px;
   }
-  .blog-details div {
+
+  .blog-details{  
+    padding: 10px 16px;
     margin: 20px 0;
+    border-bottom: 1px solid #EFA3C8;
   }
+
+  .blog-details:hover{  
+    box-shadow: 1px 3px 5px #A0C3D2;
+  }
+ 
   .blog-details button {
     background: #f1356d;
     color: #fff;

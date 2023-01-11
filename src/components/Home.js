@@ -13,7 +13,8 @@ const Home = () => {
 
     return (    
         <div className="home">
-            < BlogList blogs={blogs }  title= 'All Articles'/>
+            < BlogList blogs={blogs} title='All Articles' />
+            {/* <BlogList blogs={blogs.filter((blogs) => blogs.author === 'obito') } title = 'Obito Blogs' /> Reusing Components */}
         </div>
      );
 }

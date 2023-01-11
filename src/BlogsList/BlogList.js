@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title }) => {
+const BlogList = ({ blogs, title, handleDelete }) => {
     
 
     return (    
@@ -7,7 +7,8 @@ const BlogList = ({ blogs, title }) => {
         {blogs.map((blog) => (  
                 <div className="blog-details" key={blog.id}>
                     <h2> {blog.title}</h2>
-                    <p>Written by the author : {blog.author}</p>
+                <p>Written by the author : {blog.author}</p>
+               <button onClick={() => handleDelete(blog.id)}>delete</button>
                 </div>
             ))}
         </div>

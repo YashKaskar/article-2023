@@ -15,8 +15,8 @@ const Home = () => {
 
     useEffect(() => {
         fetch('http://localhost:8080/blogs')
-        .then(res => { return res.json() })
-        .then(data => {setBlogs(data)})
+        .then(res => { return res.json() })  //to get res from db.json file
+        .then(data => {setBlogs(data)})   //having data from db.json file
     }, []);
 
 

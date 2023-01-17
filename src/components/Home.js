@@ -1,32 +1,10 @@
 import { useState, useEffect } from "react";
 import BlogList from './../BlogsList/BlogList';
+import useFetch from './useFetch';
 
 
 const Home = () => {
-
-    const [blogs, setBlogs] = useState(null)
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
-
-
-    useEffect(() => {
-        fetch('http://localhost:8080/blogs')
-            .then(res => {
-                if (!res.ok) {
-                throw Error('could not find the data..........')
-            }
-            return res.json()
-        })  //to get res from db.json file
-            .then(data => {
-                setBlogs(data);
-                setIsPending(false)
-                setError(null)
-            })   //having data from db.json file
-        .catch(err => {
-            setError(err.message);
-            setIsPending(false)
-        })
-    }, []);
+    const { data : blogs, isPending, error } = useFetch('http://localhost:8080/blogs')
 
 
     return (    

@@ -6,20 +6,32 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null)
     const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
 
 
     useEffect(() => {
         fetch('http://localhost:8080/blogs')
-        .then(res => { return res.json() })  //to get res from db.json file
+            .then(res => {
+                if (!res.ok) {
+                throw Error('could not find the data..........')
+            }
+            return res.json()
+        })  //to get res from db.json file
             .then(data => {
                 setBlogs(data);
                 setIsPending(false)
+                setError(null)
             })   //having data from db.json file
+        .catch(err => {
+            setError(err.message);
+            setIsPending(false)
+        })
     }, []);
 
 
     return (    
         <div className="home">
+            {error && <div>{ error } </div>}
             {isPending && <div> Loading..............</div>}
             { blogs && < BlogList blogs={blogs} title='All Articles'  />}
             {/* <BlogList blogs={blogs.filter((blogs) => blogs.author === 'obito') } title = 'Obito Blogs' /> Reusing Components */}

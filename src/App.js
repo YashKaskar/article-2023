@@ -7,19 +7,27 @@ function App() {
 
   return (
 
-    <Router>  
-      <div className="App">
+    
+    <Router>
+          <div className="App">
 
-< Navbar />
+            < Navbar />
 
-<div className="container">
-  
-< Home />
-  
-</div>
+          <div className="container">
 
-</div>
+            <Switch>
+
+            <Route path= '/'>
+            < Home />
+            </Route>
+
+            </Switch>
+
+          </div>
+        
+          </div>
     </Router>
+    
     
   );
 }

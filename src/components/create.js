@@ -8,12 +8,20 @@ const Create = () => {
     const [body, setBody] = useState();
     const [author, setAuthor] = useState();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {   
         e.preventDefault();
         const blog = { title, body, author };
+
+        fetch('http://localhost:8080/blogs/',{
+            method: 'POST',
+            headers: { "Content-Type": 'application/json' },
+            body: JSON.stringify(blog)
+        }).then(() => { 
+            console.log('new blog added');
+        })
     }
     
-
+    
     return (    
         <div className="create">
             <h2>Create your articles</h2>
@@ -44,4 +52,7 @@ const Create = () => {
 }
  
 export default Create;
+
+
+
 

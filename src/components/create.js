@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 const Create = () => {
@@ -7,6 +8,7 @@ const Create = () => {
     const [title, setTitle] = useState();
     const [body, setBody] = useState();
     const [author, setAuthor] = useState();
+    const history = useHistory()
 
     const handleSubmit = (e) => {   
         e.preventDefault();
@@ -18,7 +20,9 @@ const Create = () => {
             body: JSON.stringify(blog)
         }).then(() => { 
             console.log('new blog added');
+            history.push('/')
         })
+        
     }
     
     

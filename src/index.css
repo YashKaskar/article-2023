@@ -67,4 +67,20 @@
     border-radius: 8px;
     cursor: pointer;
   }
+
+  .title {
+    font-size: 39px;
+    color: #f1356d;
+    margin-bottom: 10px;
+  }
+  .blog-details div {
+    margin: 20px 0;
+  }
   
+.pauthor { 
+ font-size: 29px;
+}
+
+span { 
+  color: #2DCDDF;
+}

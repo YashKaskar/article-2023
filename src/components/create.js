@@ -7,13 +7,18 @@ const Create = () => {
     const [title, setTitle] = useState();
     const [body, setBody] = useState();
     const [author, setAuthor] = useState();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const blog = { title, body, author };
+    }
     
 
     return (    
         <div className="create">
             <h2>Create your articles</h2>
             
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Article title</label>
                 <input type="text"
                     required
@@ -39,3 +44,4 @@ const Create = () => {
 }
  
 export default Create;
+
